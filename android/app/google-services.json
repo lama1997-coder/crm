@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042810049097",
+    "project_id": "couchcrm",
+    "storage_bucket": "couchcrm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042810049097:android:5035ad9e38df72cc026598",
+        "android_client_info": {
+          "package_name": "com.example.crm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042810049097-7g0qs8e8gr6t39r76af4g97ra9lo4ei2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTeKoZLmxyeILO2hzjQGFmlcPFOC7v1pA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042810049097-7g0qs8e8gr6t39r76af4g97ra9lo4ei2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
