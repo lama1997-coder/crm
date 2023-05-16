@@ -1,8 +1,10 @@
+import 'dart:developer';
+
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class FirebaseDataResource {
-  initializeFirebase(String path, String method, dynamic data);
+  initializeFirebase(String path);
 }
 
 class FirebaseDataResourceImpl extends FirebaseDataResource {
@@ -11,18 +13,26 @@ class FirebaseDataResourceImpl extends FirebaseDataResource {
   FirebaseDataResourceImpl(this.storageRef);
 
   @override
-  initializeFirebase(String path, String method, dynamic data) {
+  initializeFirebase(String path) {
     try {
-      if (method == "post") {
-        CollectionReference users = FirebaseFirestore.instance.collection(path);
-        return users
-            .add(data)
-            .then((value) => print("User Added"))
-            .catchError((error) => print("Failed to add user: $error"));
-      }
+      CollectionReference users = FirebaseFirestore.instance.collection(path);
+      return users;
+
+      // if (method == "post") {
+      //
+      //   return users
+      //       .add(data)
+      //       .then((value) => print("User Added"))
+      //       .catchError((error) => print("Failed to add user: $error"));
+      // }
+      // if(method=="get"){
+      //
+      //
+      //   users.where("");
+      // }
     } on FirebaseException catch (e) {
       // Caught an exception from Firebase.
-      print("Failed with error '${e.code}': ${e.message}");
+      log("Failed with error '${e.code}': ${e.message}");
     }
   }
 }

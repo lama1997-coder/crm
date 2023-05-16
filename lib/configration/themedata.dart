@@ -29,8 +29,8 @@ class ThemeDataProvider {
   static const secButtonColor = Color(0xffF27E60);
 
   static final lightTheme = ThemeData(
-    inputDecorationTheme: InputDecorationTheme(
-      hintStyle: TextStyle(color: Colors.grey),
+    inputDecorationTheme:const InputDecorationTheme(
+      hintStyle:  TextStyle(color: Colors.grey),
       filled: true,
       fillColor: Colors.white70,
       enabledBorder: OutlineInputBorder(

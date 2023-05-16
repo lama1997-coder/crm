@@ -1,9 +1,11 @@
+import 'dart:developer';
+
 import 'package:crm/data/data_resource/firebase_data_resource.dart';
 import 'package:crm/data/failure.dart';
-import 'package:crm/data/model/register_model.dart';
-import 'package:either_dart/src/either.dart';
+import 'package:either_dart/either.dart';
 
 import '../../domain/repository/register_repository.dart';
+import '../model/forms_model.dart';
 
 class RegisterRepositoryImp extends RegisterRepository {
   final FirebaseDataResource firebaseDataResource;
@@ -12,10 +14,17 @@ class RegisterRepositoryImp extends RegisterRepository {
 
   @override
   Future<Either<Failure, int>> registraation(
-      RegisterModel registerModel) async {
+      List<FormsModel> registerModel) async {
+    var dataLis=       FormsModel.iterateJson(registerModel);
+
     var promise = await firebaseDataResource.initializeFirebase(
-        "register", "post", registerModel.toJson());
-    print(promise);
+        "register");
+
+    promise
+        .add(dataLis)
+        .then((value) => log("User Added$value"))
+        .catchError((error) => log("Failed to add user: $error"));
+    log(promise);
 
     if (true) {
       return const Right(1);

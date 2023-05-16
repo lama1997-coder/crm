@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1042810049097',
     projectId: 'couchcrm',
     storageBucket: 'couchcrm.appspot.com',
-    iosClientId: '1042810049097-q8n88oqvki4h8i8qdoaoc3av755m9oig.apps.googleusercontent.com',
+    iosClientId:
+        '1042810049097-q8n88oqvki4h8i8qdoaoc3av755m9oig.apps.googleusercontent.com',
     iosBundleId: 'com.example.crm',
   );
 }

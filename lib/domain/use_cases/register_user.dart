@@ -1,17 +1,15 @@
-
-
-
 import 'package:crm/domain/repository/register_repository.dart';
 import 'package:either_dart/either.dart';
 
 import '../../data/failure.dart';
-import '../../data/model/register_model.dart';
+import '../../data/model/forms_model.dart';
 
-class RegisterUser{
+class RegisterUser {
   final RegisterRepository registerRepository;
+
   RegisterUser({required this.registerRepository});
-  Future<Either<Failure,int>> registerUser(RegisterModel registerModel){
+
+  Future<Either<Failure, int>> registerUser(List<FormsModel> registerModel) {
     return registerRepository.registraation(registerModel);
   }
-
 }

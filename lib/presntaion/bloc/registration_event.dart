@@ -1,4 +1,4 @@
-import '../../data/model/register_model.dart';
+import '../../data/model/forms_model.dart';
 
 abstract class RegistrationEvent {
   const RegistrationEvent();
@@ -7,7 +7,7 @@ abstract class RegistrationEvent {
 }
 
 class OnReloadingChanged extends RegistrationEvent {
-  final RegisterModel user;
+  final List<FormsModel> user;
 
   OnReloadingChanged({required this.user});
 

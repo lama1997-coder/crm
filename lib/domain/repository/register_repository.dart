@@ -1,8 +1,8 @@
 
 import 'package:crm/data/failure.dart';
-import 'package:crm/data/model/register_model.dart';
 import 'package:either_dart/either.dart';
+import '../../data/model/forms_model.dart';
 
 abstract class RegisterRepository {
-  Future<Either<Failure,int>>registraation(RegisterModel registerModel);
+  Future<Either<Failure,int>>registraation( List<FormsModel> registerModel);
 }

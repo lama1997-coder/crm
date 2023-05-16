@@ -17,3 +17,6 @@ class ConnectionFailure extends Failure {
 class DatabaseFailure extends Failure {
   const DatabaseFailure(String message) : super(message);
 }
+class UserNotFound extends Failure {
+  const UserNotFound(String message) : super(message);
+}
