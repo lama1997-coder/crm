@@ -20,3 +20,8 @@ class DatabaseFailure extends Failure {
 class UserNotFound extends Failure {
   const UserNotFound(String message) : super(message);
 }
+class PageNotEqual extends Failure {
+  const PageNotEqual(String message) : super(message);
+
+
+}
